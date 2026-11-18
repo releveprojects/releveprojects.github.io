@@ -1,0 +1,61 @@
+/* Relevé Projects — Basalt look, shared with the Scribe app.
+   Fonts are served from this site (fonts/), so a visit makes no third-party requests. */
+@font-face{font-family:"Exo 2";src:url("fonts/exo2.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Nunito";src:url("fonts/nunito.ttf") format("truetype");font-weight:200 1000;font-display:swap}
+:root{
+  --bg:#EDEBE5;--ink:#262624;--soft:#3A3A37;--body:#4A4945;--muted:#66645E;
+  --card:#FFFFFF;--line:#D8D5CC;--deep:#2E4B58;--on-deep:#EDEBE5;--on-deep-soft:#C9DDE2;--link:#2E4B58;
+  --display:"Exo 2",system-ui,sans-serif;--text:"Nunito",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1E1F1D;--ink:#ECEBE6;--soft:#DAD9D3;--body:#C4C3BC;--muted:#9C9A93;
+  --card:#282A27;--line:#363834;--deep:#2E4B58;--on-deep:#ECEBE6;--on-deep-soft:#B9D8E2;--link:#9CCBD8;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.65}
+a{color:var(--link)}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,.btn:focus-visible{outline:3px solid #3E889B;outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+.wrap.narrow{max-width:720px}
+header.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:28px 0}
+.brand{font-family:var(--display);font-weight:700;letter-spacing:3px;font-size:15px;text-transform:uppercase;color:var(--ink);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px}
+nav a{text-decoration:none;padding:10px 0}
+nav a:hover{text-decoration:underline}
+.label{margin:0;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+.hero{padding:88px 0 72px;display:flex;flex-direction:column;gap:26px}
+h1{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(34px,5.4vw,60px);line-height:1.12;letter-spacing:-.5px;max-width:15ch}
+.lead{display:flex;flex-direction:column;gap:16px;max-width:60ch;font-size:19px;color:var(--soft)}
+.lead p{margin:0}
+.idea{background:var(--deep);color:var(--on-deep);border-radius:20px;padding:clamp(30px,6vw,60px);display:flex;flex-direction:column;gap:18px;margin-bottom:72px}
+.idea .label{color:var(--on-deep-soft)}
+.idea .claim{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(24px,3.6vw,36px);line-height:1.28;max-width:24ch}
+.idea p.more{margin:0;max-width:58ch;color:#E3E8E6}
+.cards{display:flex;flex-wrap:wrap;gap:20px;padding-bottom:80px}
+.card{flex:1 1 260px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:8px}
+.card h2{margin:0;font-family:var(--display);font-weight:600;font-size:19px}
+.card p{margin:0;color:var(--body);font-size:16px}
+section.block{padding-bottom:72px;display:flex;flex-direction:column;gap:18px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;display:flex;flex-wrap:wrap;gap:26px;align-items:center}
+.appicon{width:76px;height:76px;border-radius:20px;background:#2E4B58;display:flex;align-items:center;justify-content:center;flex:none}
+.project .info{flex:999 1 320px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.project h3{margin:0;font-family:var(--display);font-weight:600;font-size:24px}
+.project p{margin:0;color:var(--body)}
+.project .meta{font-size:15px;color:var(--muted)}
+.btn{flex:none;display:inline-block;background:#2E4B58;color:#FFFFFF;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;font-size:16px}
+.btn:hover{background:#243C47}
+@media (prefers-color-scheme:dark){.btn{background:#3E889B;color:#10201F}.btn:hover{background:#4C97AA}}
+.after{margin:0;max-width:60ch;color:var(--body)}
+.checks{display:flex;flex-wrap:wrap;gap:20px}
+.checks p{margin:0;flex:1 1 260px;border-top:2px solid var(--link);padding-top:16px;font-size:16px;color:var(--soft)}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:15px;color:var(--muted)}
+footer span.links{display:flex;flex-wrap:wrap;gap:22px}
+/* privacy page */
+article.doc{padding:40px 0 72px}
+article.doc h1{font-size:clamp(30px,4.4vw,44px);max-width:none;margin-bottom:8px}
+article.doc h2{font-family:var(--display);font-weight:600;font-size:21px;margin:36px 0 8px}
+article.doc p,article.doc li{color:var(--soft)}
+article.doc ul{padding-left:22px}
+article.doc .date{color:var(--muted);font-size:15px}
